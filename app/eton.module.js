@@ -5,6 +5,9 @@
 			'ngMaterial',
 			'ngAnimate',
 			'ngResource',
-			'ngSanitize'
+			'ngSanitize',
+
+			/* Angular-ui Modules*/
+			'ui.router'
 		]);
 })()

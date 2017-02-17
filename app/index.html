@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="eton">
 <head>
 	<meta charset="UTF-8">
 	<title>Eton</title>
@@ -13,9 +13,12 @@
 </head>
 <body>
 
-	<p>Eton</p>
+	<ui-view></ui-view>
 
 	<script type="text/javascript" src="/@@js/vendors.min.js"></script>
 	<script type="text/javascript" src="/@@js/eton.min.js"></script>
+
+	<script src="//localhost:35729/livereload.js"></script>
+
 </body>
 </html>
