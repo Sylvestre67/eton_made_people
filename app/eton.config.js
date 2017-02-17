@@ -1,5 +1,12 @@
-describe("Initial test`", function () {
-	it("should test", function () {
-		expect(2).toEqual(2);
-	});
-});
+(function () {
+	'use strict';
+	angular
+		.module('eton')
+		.config(config);
+
+	config.$inject = [];
+
+	function config(){
+
+	}
+})()
