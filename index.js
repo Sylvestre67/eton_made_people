@@ -11,7 +11,13 @@ var express = require('express');
 var app = require('express')();
 
 app.set('port', (process.env.PORT));
+
+/* Serve static compiled files */
 app.use(express.static(__dirname + '/dist'));
+
+/* Serve static *.html component files */
+app.use(express.static(__dirname + '/app/eton'));
+
 app.engine('html', require('ejs').renderFile);
 
 app.set('views', __dirname + '/');
