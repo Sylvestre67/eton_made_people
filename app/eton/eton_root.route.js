@@ -10,7 +10,7 @@
 	function routeConfig($stateProvider){
 		$stateProvider
 			.state('eton', {
-					url: '/',
+					url: '',
 					component: 'etonRootComponent',
 					//adgroupPerformanceService : 'adgroupPerformanceService',
 					/*resolve: {

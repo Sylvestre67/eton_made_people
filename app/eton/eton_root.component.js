@@ -6,7 +6,7 @@
         .component('etonRootComponent', {
             controller: etonRootComponentController,
             controllerAs: 'vm',
-            templateUrl: 'index.html' ,
+            templateUrl: 'etonRootView.html' ,
             bindings: {},
         });
 
