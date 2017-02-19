@@ -6,7 +6,7 @@
         .component('homeComponent', {
             controller: homeComponentController,
             controllerAs: 'vm',
-            templateUrl: '/views/homeComponentView.html' ,
+            templateUrl: '/views/home/homeComponentView.html' ,
             bindings: {
 
             },
