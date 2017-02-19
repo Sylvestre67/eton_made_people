@@ -124,7 +124,7 @@ module.exports = function(grunt) {
 					'app/*.html',
 					'app/**/*.html'
 				], // which files to watch
-				tasks: ['concat', 'ngAnnotate', 'uglify:app','less_imports', 'less'],
+				tasks: ['concat', 'ngAnnotate', 'uglify:app','less_imports', 'less', 'setopts_dev', 'replace'],
 				options: {
 					nospawn: true,
 					livereload: true,
@@ -152,6 +152,9 @@ module.exports = function(grunt) {
 	});
 
 	grunt.registerTask('default', ['concat', 'ngAnnotate', 'uglify', 'less_imports', 'less',
+		'setopts_dev', 'replace', 'watch']);
+
+	grunt.registerTask('rebuild', ['concat', 'ngAnnotate', 'uglify', 'less_imports', 'less',
 		'setopts_dev', 'replace', 'watch']);
 
 	grunt.registerTask('deploy', ['clean:release', 'concat', 'ngAnnotate', 'uglify', 'less_imports', 'less',
