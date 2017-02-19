@@ -1,4 +1,4 @@
-describe("Component: Eton Root", function () {
+describe("Component: Btn", function () {
 	var $componentController,bindings,vm,onClickSpy;
 
 	beforeEach(module('eton'));
