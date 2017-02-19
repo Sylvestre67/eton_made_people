@@ -29,7 +29,7 @@
         }
 
         function onClickEvent(){
-            vm.onClick({closet:vm.closet});
+            vm.onClick({closet: vm.closet});
         }
     }
 })();

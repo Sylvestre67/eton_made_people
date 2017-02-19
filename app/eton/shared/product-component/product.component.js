@@ -29,7 +29,7 @@
 		}
 
 		function onClickEvent(){
-			vm.onClick({product:vm.product});
+			vm.onClick({product: vm.product});
 		}
 	}
 })();

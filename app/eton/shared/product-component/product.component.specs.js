@@ -1,4 +1,4 @@
-describe("Component: Closet", function () {
+describe("Component: Product", function () {
 	var $componentController,bindings,vm,onClickSpy,product;
 
 	beforeEach(module('eton'));
@@ -14,7 +14,7 @@ describe("Component: Closet", function () {
 		};
 
 		bindings = {
-			product: closet,
+			product: product,
 			onClick: onClickSpy
 		};
 
@@ -29,11 +29,12 @@ describe("Component: Closet", function () {
 		expect(vm.product).toEqual(product);
 	});
 
-	it("should fire an event back to parent onClick", function () {
+	describe("Function: onClickEvent", function () {
 		beforeEach(inject(function(){
 			vm.onClickEvent();
 		}));
-		expect(onClickSpy).toHaveBeenCalledWith({product: vm.product})
+		it("should fire an event back to parent onClick", function () {
+			expect(onClickSpy).toHaveBeenCalledWith({product: vm.product})
+		});
 	});
-
 });

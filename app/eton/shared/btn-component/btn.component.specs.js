@@ -22,11 +22,15 @@ describe("Component: Btn", function () {
 		expect(vm.label).toEqual('TESTING_BTN');
 	});
 
-	it("should fire an event back to parent onClick", function () {
+	describe("Function: onClickEvent", function () {
 		beforeEach(inject(function(){
 			vm.onClickEvent();
 		}));
-		expect(onClickSpy).toHaveBeenCalledWith({'btn':'TESTING_BTN'})
+
+		it("should fire an event back to parent onClick", function () {
+			expect(onClickSpy).toHaveBeenCalledWith({'btn':'TESTING_BTN'})
+		});
 	});
+
 
 });

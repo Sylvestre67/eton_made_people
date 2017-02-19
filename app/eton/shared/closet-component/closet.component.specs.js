@@ -1,12 +1,12 @@
 describe("Component: Closet", function () {
-	var $componentController,bindings,vm,onClickSpy,closet;
+	var $componentController,bindings,vm,onClickSpy,closetData;
 
 	beforeEach(module('eton'));
 
 	beforeEach(inject(function(_$componentController_){
 		$componentController = _$componentController_;
 		onClickSpy = jasmine.createSpy('onClick');
-		closet = {
+		closetData =  {
 			id:1,
 			thumbnail:'',
 			title:'',
@@ -14,7 +14,7 @@ describe("Component: Closet", function () {
 		};
 
 		bindings = {
-			closet: closet,
+			closet: closetData,
 			onClick: onClickSpy
 		};
 
@@ -26,14 +26,16 @@ describe("Component: Closet", function () {
 	});
 
 	it("should expose a vm.closet value inherited from parent binding", function () {
-		expect(vm.closet).toEqual(closet);
+		expect(vm.closet).toEqual(closetData);
 	});
 
-	it("should fire an event back to parent onClick", function () {
+	describe("Function: onClickEvent", function () {
 		beforeEach(inject(function(){
 			vm.onClickEvent();
 		}));
-		expect(onClickSpy).toHaveBeenCalledWith({closet: vm.closet})
-	});
 
+		it("should fire an event back to parent onClick", function () {
+			expect(onClickSpy).toHaveBeenCalledWith({ 'closet': closetData})
+		});
+	});
 });
