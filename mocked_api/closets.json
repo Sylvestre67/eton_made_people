@@ -1,5 +1,5 @@
 [
-  {"id":1,"name":"the essentials"},
-  {"id":2,"name":"closet no 6"},
-  {"id":3,"name":"closet no 14"}
+  {"id":1,"name":"the essentials","thumbnail":"/img/closet_1.jpg"},
+  {"id":2,"name":"closet no 6","thumbnail":"/img/closet_2.jpg"},
+  {"id":3,"name":"closet no 14","thumbnail":"/img/closet_3.jpg"}
 ]
