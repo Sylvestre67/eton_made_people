@@ -6,7 +6,7 @@
         .component('dropdownComponent', {
             controller: dropdownComponentController,
             controllerAs: 'vm',
-            templateUrl : 'dropdown-component/dropdownComponentView.html',
+            templateUrl : 'shared/dropdown-component/dropdownComponentView.html',
             bindings: {
             	list:'<',
 	            onSelect:'&'
