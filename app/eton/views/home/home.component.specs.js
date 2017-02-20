@@ -28,7 +28,7 @@ describe("Component: Home", function () {
 	describe("Function: queryObject", function () {
 		describe("api call is succesfull", function () {
 			beforeEach(inject(function(){
-				vm.queryObject('products',view_products);
+				vm.queryObject('products');
 				homeServiceDeferred.resolve(productList);
 				//////
 				$rootScope.$apply();
@@ -41,8 +41,8 @@ describe("Component: Home", function () {
 			});
 
 			it("should assign the response to vm.products",function(){
-				expect(view_products).toEqual(productList);
-			})
+				expect(vm['products']).toEqual(productList);
+			});
 		});
 		describe("api call fail",function(){
 			beforeEach(inject(function(){

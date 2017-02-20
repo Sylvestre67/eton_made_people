@@ -15,21 +15,19 @@
     /* @ngInject */
     function homeComponentController(homeService) {
         var vm = this;
-        vm.products = [];
-        vm.closets = [];
 
         vm.$onInit = onInit;
 	    vm.queryObject = queryObject;
 
         ////////////////////
         function onInit(){
-	        vm.queryObject('products',vm.products);
-	        vm.queryObject('closets',vm.closets);
+	        vm.queryObject('products');
+	        vm.queryObject('closets');
         }
 
-	    function queryObject(object,vm){
+	    function queryObject(object){
 		    homeService.query({object:object},function(response){
-			    vm = response;
+			    vm[object] = response;
 		    },function(err){
 			    console.error(err);
 		    })
