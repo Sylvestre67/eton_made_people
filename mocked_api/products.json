@@ -15,24 +15,24 @@
     "name":"john clark print shirt",
     "price":1295,
     "thumbnail":"",
-    "type":"slim fit"
+    "cut":"slim fit"
   },
   { "id":4,
     "name":"red micro dots shirt",
     "price":1295,
     "thumbnail":"",
-    "type":"slim fit"
+    "cut":"slim fit"
   },
   { "id":5,
     "name":"navy cat print shirt",
     "price":1295,
     "thumbnail":"",
-    "type":"slim fit"
+    "cut":"slim fit"
   },
   { "id":6,
     "name":"light blues twill shirt",
     "price":1295,
     "thumbnail":"",
-    "type":"contemporary fit"
+    "cut":"contemporary fit"
   }
 ]
