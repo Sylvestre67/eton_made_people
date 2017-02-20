@@ -1,17 +1,45 @@
 @import '../../../assets/variables';
 @import '../../../assets/mixins';
 
-
-.product-component{
-	width:100%;
-	height:auto;
-	& p{
-		&:first-of-type{
-			margin-bottom:0;
-			font-weight:600;
-		}
-		&:last-child{
-			text-transform: uppercase;
+product-component{
+	.flex-item(@flex-grow:1, @flex-shrink:1, @flex-basis:45%);
+	margin-bottom: 1em;
+	&:nth-child(even){
+		.product-component{
+			padding:0 0 0 .5em;
 		}
 	}
+	&:nth-child(odd){
+		.product-component{
+			padding:0 .5em 0 0;
+		}
+	}
+	& .product-component{
+		width:100%;
+		.thumbnail{
+			& img{
+				width:100%;
+				height: auto;
+			}
+		}
+
+		& .caption{
+			margin-top:.3rem;
+			min-height:2em;
+			& p{
+				font-size: .8rem;
+				&:first-of-type{
+					margin-bottom:0;
+					font-weight:600;
+					text-transform: capitalize;
+				}
+				&:last-child{
+					text-transform: uppercase;
+				}
+			}
+		}
+
+
+	}
 }
+

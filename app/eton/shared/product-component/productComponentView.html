@@ -1,5 +1,10 @@
 <div class="product-component">
-	<img class="img-responsive" ng-src="http://lorempixel.com/180/250/">
-	<p>Black shirt with colar</p>
-	<p>Slim Fit / 1295 SEK.</p>
+	<div class="thumbnail">
+		<img class="img-responsive"
+		     ng-src="http://lorempixel.com/180/250/">
+	</div>
+	<div class="caption">
+		<p>{{ vm.product.name }}</p>
+		<p>{{ vm.product.cut }} / {{ vm.product.price }} SEK.</p>
+	</div>
 </div>
