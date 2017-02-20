@@ -1,0 +1,38 @@
+[
+  { "id":1,
+    "name":"solid black dress shirt",
+    "price":1295,
+    "thumbnail":"",
+    "cut":"slim fit"
+  },
+  { "id":2,
+    "name":"blue indingo casual shirt",
+    "price":1295,
+    "thumbnail":"",
+    "cut":"super slim fit"
+  },
+  { "id":3,
+    "name":"john clark print shirt",
+    "price":1295,
+    "thumbnail":"",
+    "type":"slim fit"
+  },
+  { "id":4,
+    "name":"red micro dots shirt",
+    "price":1295,
+    "thumbnail":"",
+    "type":"slim fit"
+  },
+  { "id":5,
+    "name":"navy cat print shirt",
+    "price":1295,
+    "thumbnail":"",
+    "type":"slim fit"
+  },
+  { "id":6,
+    "name":"light blues twill shirt",
+    "price":1295,
+    "thumbnail":"",
+    "type":"contemporary fit"
+  }
+]
