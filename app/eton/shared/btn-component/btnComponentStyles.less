@@ -1,3 +1,13 @@
 @import '../../../assets/variables';
 @import '../../../assets/mixins';
 
+.btn-eton{
+	border-radius:0;
+	background-color:@blue;
+	color:@white;
+	font-size:.8rem;
+	text-transform: uppercase;
+	&:focus{
+		box-shadow: 0 0 0 2px fade(@blue,75);
+	}
+}
