@@ -17,6 +17,7 @@ app.use(express.static(__dirname + '/dist'));
 
 /* Serve static *.html component files */
 app.use(express.static(__dirname + '/app/eton'));
+app.use(express.static(__dirname + '/app/assets'));
 app.use(express.static(__dirname + '/mocked_api/'));
 
 app.engine('html', require('ejs').renderFile);
