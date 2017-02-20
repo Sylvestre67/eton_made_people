@@ -1,19 +1,29 @@
-<section class="home-component">
-	<section class="jumbo">
+<div class="home-component">
+
+	<div class="jumbo">
 		<img class="img-responsive" ng-src="http://lorempixel.com/300/180/">
-		<h6>Spring / Summer 16</h6>
-		<p>{{ vm.products }}</p>
-		<p class="caption"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-			Aenean scelerisque, arcu sit amet rhoncus laoreet,
-			nisi nibh rutrum ligula, vel sagittis nisi arcu sed diam </p>
-		<btn-component label="explore collection" on-click="vm.ctaClick()"></btn-component>
-	</section>
+	</div>
 
-	<section>
-		<closet-component closet="{}" on-click="vm.goToCloset()"></closet-component>
-	</section>
+	<div class="container">
 
-	<section>
-		<product-component product="{}" on-click="vm.goToProduct()"></product-component>
-	</section>
-</section>
+		<div class="jumbo-caption">
+			<h6>Spring / Summer 16</h6>
+			<p class="caption"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+				Aenean scelerisque, arcu sit amet rhoncus laoreet,
+				nisi nibh rutrum ligula, vel sagittis nisi arcu sed diam </p>
+			<btn-component label="explore collection" on-click="vm.ctaClick()"></btn-component>
+		</div>
+
+		<closet-component
+				ng-repeat="closet in vm.closets track by $index"
+				closet="closet"
+				on-click="vm.goToCloset()"></closet-component>
+
+		<div class="product-list">
+			<product-component
+					ng-repeat="product in vm.products track by $index"
+					product="product"
+					on-click="vm.goToProduct()"></product-component>
+		</div>
+	</div>
+</div>
