@@ -9,13 +9,7 @@
 
 	/* @ngInject */
 	function homeService($resource) {
-		this.getObject = getObject;
-
-		////////////////
-
-		function getObject() {
-			return $resource('/mocked_api/:object.json',{})
-		}
+		return $resource('/:object.json',{})
 	}
 
 })();

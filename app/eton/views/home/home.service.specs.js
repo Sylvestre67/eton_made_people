@@ -55,9 +55,9 @@ describe("Service: perfChannelsServices", function () {
 
 	describe("Get data", function () {
 		it("should make a request to QUERY the products list", function () {
-			$httpBackend.expectGET('/mocked_api/products.json')
+			$httpBackend.expectGET('/products.json')
 				.respond(list);
-			var result = homeService.getObject().query({object:'products'});
+			var result = homeService.query({object:'products'});
 			$httpBackend.flush();
 			expect(result[0].name).toEqual(list[0].name);
 		});
