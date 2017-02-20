@@ -1,5 +1,18 @@
-<closet-component closet="{}" on-click="vm.goToCloset()"></closet-component>
+<section class="home-component">
+	<section class="jumbo">
+		<img class="img-responsive" ng-src="http://lorempixel.com/300/180/">
+		<h6>Spring / Summer 16</h6>
+		<p class="caption"> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+			Aenean scelerisque, arcu sit amet rhoncus laoreet,
+			nisi nibh rutrum ligula, vel sagittis nisi arcu sed diam </p>
+		<btn-component label="explore collection" on-click="vm.ctaClick()"></btn-component>
+	</section>
 
-<btn-component label="explore collection" on-click="vm.ctaClick()"></btn-component>
+	<section>
+		<closet-component closet="{}" on-click="vm.goToCloset()"></closet-component>
+	</section>
 
-<product-component product="{}" on-click="vm.goToProduct()"></product-component>
+	<section>
+		<product-component product="{}" on-click="vm.goToProduct()"></product-component>
+	</section>
+</section>
