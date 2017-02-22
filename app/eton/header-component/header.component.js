@@ -15,6 +15,7 @@
     /* @ngInject */
     function headerComponentController() {
         var vm = this;
+        vm.open = false;
 
         vm.$onInit = onInit;
 

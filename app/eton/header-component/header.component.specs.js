@@ -13,4 +13,8 @@ describe("Component: Header", function () {
 	it("should have an $onInit function", function () {
 		expect(vm.$onInit).toEqual(jasmine.any(Function))
 	});
+
+	it("should expose a boolen to rule state of the navigation", function () {
+		expect(vm.open).toBeFalsy();
+	});
 });
