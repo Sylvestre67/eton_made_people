@@ -2,24 +2,42 @@
 
 <div class="footer-nav">
 	<span>
-		<a class="">stores</a>
+		<a class="">A</a>
 	</span>
 	<span>
-		<a class="">login</a>
+		<a class="">B</a>
 	</span>
 	<span>
-		<dropdown-component></dropdown-component>
-
-		  <!--<select class="form-control">
-			  <option>
-				  <span class="flag-icon flag-icon-sw"></span> Sweden
-			  </option>
-			  <option><span class="flag-icon flag-icon-fr"></span> France</option>
-			  <option><span class="flag-icon flag-icon-gr"></span> Uk</option>
-			  <option><span class="flag-icon flag-icon-sp"></span> Spain</option>
-		  </select>-->
+		<dropdown-component list="vm.listOfCountries"
+		                    item="vm.selectedCountry">
+			<dd-item>
+				<span class="flag-icon" ng-class="'flag-icon-se' + country.code"></span>
+				{{ vm.selectedCountry.name }}
+			</dd-item>
+			<dd-menu>
+				<li class="list-unstyled"
+				    ng-click="vm.updateCountry(country)"
+				    ng-repeat="country in vm.listOfCountries">
+					<span class="flag-icon" ng-class="'flag-icon-se' + country.code"></span>
+					{{ country.name }}
+				</li>
+			</dd-menu>
+		</dropdown-component>
 	</span>
 </div>
+
+<!--
+
+<ul class="dropdown-menu">
+					<li ng-click="vm.onSelectEvent(item)" ng-repeat="country in vm.listOfCountries">
+						<span class="flag-icon" ng-class="'flag-icon-se' + country.code"></span>
+						{{ country.name }}
+					</li>
+				</ul>
+
+<dropdown-component-menu>
+
+			</dropdown-component-menu>
 
 <hr>
 
@@ -55,4 +73,4 @@
 
 <div>
 	<p>© 2017 Eton. All rights reserved.</p>
-</div>
+</div>-->
