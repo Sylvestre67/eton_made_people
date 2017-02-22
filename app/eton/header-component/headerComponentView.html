@@ -1,14 +1,67 @@
-<nav class="navbar fixed-top navbar-light">
-	<div>
+<nav class="navbar fixed-top" ng-class="(vm.open) ? 'open' : 'open';">
+
+	<div class="brand-nav">
 		<span>eton</span>
 		<span><i class="icon ion-ios-briefcase-outline"></i>0 SEK</span>
 	</div>
 
-	<div>
-		<ul>
-			<li>shirts</li>
-			<li>accesories</li>
-			<li>our world</li>
-		</ul>
+	<div class="nav-menu">
+		<div class="search">
+			<div class="input-group">
+				<div class="input-group-addon">
+					<i class="icon ion-ios-search-strong"></i>
+				</div>
+				<input type="text" class="form-control" id="search" placeholder="">
+			</div>
+		</div>
+
+		<div class="top-nav">
+			<span>
+				<a class="active">shirts</a>
+			</span>
+			<span>
+				<a class="">accesories</a>
+			</span>
+			<span>
+				<a class="">our world</a>
+			</span>
+		</div>
+
+		<div class="nav-body">
+			<div class="row">
+				<div class="col">
+					<h6>body fit</h6>
+					<ul class="list-unstyled">
+						<li>super slim</li>
+						<li>slim</li>
+						<li>contemporary</li>
+						<li>classic</li>
+						<li>extra long sleeve</li>
+					</ul>
+				</div>
+				<div class="col">
+					<ul class="list-unstyled">
+						<li>all shirts</li>
+						<li>new arrivals</li>
+						<li>white shirts</li>
+						<li>outlet</li>
+					</ul>
+					<ul class="list-unstyled">
+						<li>size guide</li>
+						<li>eton express</li>
+					</ul>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col">
+					<h6>collection</h6>
+					<ul class="list-unstyled">
+						<li>red ribbon</li>
+						<li>green ribbon</li>
+						<li>black ribbon</li>
+					</ul>
+				</div>
+			</div>
+		</div>
 	</div>
 </nav>

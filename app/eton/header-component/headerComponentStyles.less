@@ -4,11 +4,93 @@
 header-component{
 	& .navbar{
 		background-color:@white;
-		& a.navbar-brand{
-			&.open{
+
+		&.open{
+			background-color:@blue;
+			& span{
 				color:@white;
-				text-transform:uppercase;
+				& a{
+					opacity:.5;
+					&.active{
+						opacity:1;
+					}
+				}
+			}
+			& h6{
+				color:@white;
+			}
+			& ul{
+				& li{
+					color:@white;
+				}
 			}
 		}
+
+		& .brand-nav{
+			.flex-container;
+			.flex-flow(@direction:row,@wrap:nowrap);
+			.flex-justify-content(@justify:space-between);
+			.flex-align-content(@align-content:center);
+			& span{
+				text-transform:uppercase;
+				&:last-child{
+					& .icon{
+						margin-right:.3rem;
+						font-weight:600;
+					}
+				}
+			}
+		}
+		& .nav-menu{
+			& .search{
+				& .input-group{
+					background-color: darken(@blue,5);
+					& .input-group-addon{
+						padding: .2rem .5rem;
+						background-color: transparent;
+						border-radius: 0;
+						border: none;
+						& i{
+							color: @white;
+						}
+					}
+					& input{
+						background-color: transparent;
+						border-radius: 0;
+						border: none;
+						color: @white;
+					}
+				}
+			}
+			& .top-nav{
+				.flex-container;
+				.flex-flow(@direction:row,@wrap:nowrap);
+				.flex-justify-content(@justify:space-between);
+				.flex-align-content(@align-content:center);
+				padding-top:1rem;
+				& span{
+					text-transform:uppercase;
+				}
+			}
+			& .nav-body{
+				padding-top:2rem;
+				& .row{
+					& .col{
+						& h6{
+							text-transform: uppercase;
+						}
+						& ul{
+							& li{
+								font-size:.8rem;
+								font-weight: 100;
+								text-transform:capitalize;
+							}
+						}
+					}
+				}
+			}
+		}
+
 	}
+
 }
