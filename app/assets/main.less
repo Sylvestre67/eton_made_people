@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import 'mixins';
+@import 'variables';
 
 body,html{
 	position:relative;
 	min-height:100%;
+	color: @text-color;
 }
 
 /*
@@ -15,7 +18,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
 
 p{
 	&.caption{
-		font-family: "Times New Roman", georgia, serif;
+		font-family: @base-font;
 	}
 }
 

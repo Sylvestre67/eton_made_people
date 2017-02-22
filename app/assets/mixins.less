@@ -43,3 +43,22 @@
 	-ms-flex:@flex-grow @flex-shrink @flex-basis;
 	flex:@flex-grow @flex-shrink @flex-basis;
 }
+
+.placeholder(@font-family-base,@font-style){
+	&::-webkit-input-placeholder {
+		font-family: @font-family-base;
+		font-style:  @font-style;
+	}
+	&::-moz-placeholder {
+		font-family: @font-family-base;
+		font-style: @font-style;
+	}
+	&:-ms-input-placeholder {
+		font-family: @font-family-base;
+		font-style: @font-style;
+	}
+	&:-moz-placeholder {
+		font-family: @font-family-base;
+		font-style: @font-style;
+	}
+}
