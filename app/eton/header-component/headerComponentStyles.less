@@ -1,2 +1,14 @@
 @import '../../assets/variables';
 @import '../../assets/mixins';
+
+header-component{
+	& .navbar{
+		background-color:@white;
+		& a.navbar-brand{
+			&.open{
+				color:@white;
+				text-transform:uppercase;
+			}
+		}
+	}
+}
