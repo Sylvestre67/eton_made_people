@@ -1,2 +1,72 @@
 @import '../../assets/variables';
 @import '../../assets/mixins';
+
+footer-component{
+	& div {
+		margin:.5rem 0;
+		&.footer-nav{
+			margin:0 1rem;
+			.flex-container;
+			.flex-flow(@direction:row,@wrap:nowrap);
+			.flex-justify-content(@justify:space-around);
+			.flex-align-content(@align-content:center);
+			& span{
+				.flex-item(@flex-grow:1,@flex-shrink:1,@flex-basis:20%);
+				text-align: center;
+				& a{
+					text-transform:capitalize;
+				}
+				& select{
+					border:none;
+					background: url(/img/icons/caret-down.png) no-repeat right;
+					-webkit-appearance: none;
+				}
+			}
+
+		}
+		&.footer-social{
+			& .input-group{
+				.flex-container;
+				.flex-flow(@direction:row,@wrap:nowrap);
+				.flex-justify-content(@justify:center);
+				& input{
+					max-width: 50%;
+					border: .2rem solid @blue;
+					border-radius: 0;
+					.placeholder(@font-family-base:@base-font,@font-style:italic);
+				}
+				& span {
+					background-color:@blue;
+					border: .2rem solid @blue;
+					border-radius:0;
+					color:@white;
+					text-transform:uppercase;
+				}
+			}
+
+		}
+		&.footer-menu{
+			& > ul{
+				& li{
+					font-size:.7rem;
+					font-weight:600;
+					text-align:center;
+					text-transform:uppercase;
+				}
+			}
+		}
+		&.payment-opt{
+			.flex-container;
+			.flex-flow(@direction:row,@wrap:nowrap);
+			.flex-justify-content(@justify:center);
+			& img{
+				margin:.3rem;
+			}
+		}
+		&:last-child{
+			font-size:.8rem;
+			color:@text-color-lighter;
+			text-align:center;
+		}
+	}
+}
