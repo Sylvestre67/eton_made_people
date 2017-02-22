@@ -1,3 +1,22 @@
 @import '../../../assets/variables';
 @import '../../../assets/mixins';
 
+dropdown-component{
+	& .dropdown{
+		& .btn{
+			background-color:transparent;
+			text-transform: capitalize;
+			&:focus {
+				outline: 0;
+				-webkit-box-shadow: none;
+				box-shadow: none;
+			}
+		}
+		& .dropdown-menu{
+			border-radius: 0;
+			& li{
+				text-transform: capitalize;
+			}
+		}
+	}
+}

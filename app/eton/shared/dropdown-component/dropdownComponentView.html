@@ -1,1 +1,15 @@
-<p>DropDown works</p>
+<div class="dropdown" ng-class="(vm.showMenu) ? 'show' : '';">
+	<button class="btn dropdown-toggle"
+	        type="button"
+	        ng-click="vm.showMenu = !vm.showMenu">
+		<span ng-transclude="item">
+			{{ vm.item }}
+		</span>
+		<span class="caret"></span>
+	</button>
+	<ul class="dropdown-menu" ng-transclude="menu">
+		<li ng-click="vm.onSelectEvent(item)" ng-repeat="item in vm.list">
+			item : {{ item.name }}
+		</li>
+	</ul>
+</div>
