@@ -1,12 +1,13 @@
-<nav class="navbar fixed-top" ng-class="(vm.open) ? 'open' : 'open';">
+<nav class="navbar fixed-top" ng-class="(vm.open) ? 'open' : '';">
 
 	<div class="brand-nav">
-		<span>eton</span>
+		<span ng-click="vm.open = !vm.open">eton</span>
 		<span><i class="icon ion-ios-briefcase-outline"></i>0 SEK</span>
 	</div>
 
 	<div class="nav-menu">
-		<div class="search">
+
+		<div ng-if="vm.open" class="search-nav">
 			<div class="input-group">
 				<div class="input-group-addon">
 					<i class="icon ion-ios-search-strong"></i>
@@ -15,7 +16,7 @@
 			</div>
 		</div>
 
-		<div class="top-nav">
+		<div ng-click="vm.open = true" class="top-nav">
 			<span>
 				<a class="active">shirts</a>
 			</span>
@@ -27,7 +28,7 @@
 			</span>
 		</div>
 
-		<div class="nav-body">
+		<div ng-if="vm.open" class="nav-body">
 			<div class="row">
 				<div class="col">
 					<h6>body fit</h6>

@@ -4,7 +4,6 @@
 header-component{
 	& .navbar{
 		background-color:@white;
-
 		&.open{
 			background-color:@blue;
 			& span{
@@ -25,12 +24,12 @@ header-component{
 				}
 			}
 		}
-
 		& .brand-nav{
 			.flex-container;
 			.flex-flow(@direction:row,@wrap:nowrap);
 			.flex-justify-content(@justify:space-between);
 			.flex-align-content(@align-content:center);
+			background-color: inherit;
 			& span{
 				text-transform:uppercase;
 				&:last-child{
@@ -41,56 +40,86 @@ header-component{
 				}
 			}
 		}
-		& .nav-menu{
-			& .search{
-				& .input-group{
-					background-color: darken(@blue,5);
-					& .input-group-addon{
-						padding: .2rem .5rem;
-						background-color: transparent;
-						border-radius: 0;
-						border: none;
-						& i{
-							color: @white;
-						}
-					}
-					& input{
-						background-color: transparent;
-						border-radius: 0;
-						border: none;
+		& .top-nav{
+			.flex-container;
+			.flex-flow(@direction:row,@wrap:nowrap);
+			.flex-justify-content(@justify:space-between);
+			.flex-align-content(@align-content:center);
+			padding-top:1rem;
+			& span{
+				text-transform:uppercase;
+			}
+		}
+		& .search-nav{
+			margin-top:1rem;
+			& .input-group{
+				background-color: darken(@blue,5);
+				& .input-group-addon{
+					padding: .2rem .5rem;
+					background-color: transparent;
+					border-radius: 0;
+					border: none;
+					& i{
 						color: @white;
 					}
 				}
-			}
-			& .top-nav{
-				.flex-container;
-				.flex-flow(@direction:row,@wrap:nowrap);
-				.flex-justify-content(@justify:space-between);
-				.flex-align-content(@align-content:center);
-				padding-top:1rem;
-				& span{
-					text-transform:uppercase;
+				& input{
+					background-color: transparent;
+					border-radius: 0;
+					border: none;
+					color: @white;
 				}
 			}
-			& .nav-body{
+		}
+		& .nav-body{
+			& .row{
 				padding-top:2rem;
-				& .row{
-					& .col{
-						& h6{
-							text-transform: uppercase;
-						}
-						& ul{
-							& li{
-								font-size:.8rem;
-								font-weight: 100;
-								text-transform:capitalize;
-							}
+				& .col{
+					& h6{
+						text-transform: uppercase;
+					}
+					& ul{
+						& li{
+							font-size:.8rem;
+							font-weight: 100;
+							text-transform:capitalize;
 						}
 					}
 				}
 			}
 		}
-
 	}
+}
 
+/********************
+  ** Animation **
+********************/
+@animation-duration:600ms;
+header-component{
+	& .navbar{
+		& .nav-body{
+			&.ng-enter{
+				.transition(@property:all,@duration:@animation-duration,@effect:ease);
+				opacity:0;
+				max-height:0;
+			}
+			&.ng-enter.ng-enter-active {
+				opacity:1;
+				max-height:999px;
+			}
+		}
+		& .search-nav{
+			&.ng-enter{
+				.transition(@property:all,@duration:800ms,@effect:ease);
+				position:absolute;
+				z-index:-2;
+				top:-40px;
+			}
+
+			&.ng-enter.ng-enter-active {
+				position:relative;
+				top:0;
+			}
+		}
+	}
 }
