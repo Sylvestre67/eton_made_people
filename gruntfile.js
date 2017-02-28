@@ -178,5 +178,3 @@ module.exports = function(grunt) {
 	grunt.registerTask('deploy', ['clean:release','copy', 'concat', 'ngAnnotate', 'uglify', 'less_imports', 'less',
 		'hash', 'setopts', 'replace', 'clean:build']);
 };
-
-/*@import '../../node_modules/flag-icon-css/less/flag-icon';*/
