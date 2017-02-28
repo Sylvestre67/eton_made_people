@@ -30,8 +30,14 @@ header-component{
 			.flex-justify-content(@justify:space-between);
 			.flex-align-content(@align-content:center);
 			background-color: inherit;
+			border-bottom: 1px solid fade(@text-color-lighter,50%);
 			& span{
 				text-transform:uppercase;
+				&:first-child{
+					font-family: @base-font;
+					font-size:1.2rem;
+					letter-spacing: .1rem;
+				}
 				&:last-child{
 					& .icon{
 						margin-right:.3rem;
@@ -45,13 +51,13 @@ header-component{
 			.flex-flow(@direction:row,@wrap:nowrap);
 			.flex-justify-content(@justify:space-between);
 			.flex-align-content(@align-content:center);
-			padding-top:1rem;
+			padding-top:.5rem;
 			& span{
 				text-transform:uppercase;
 			}
 		}
 		& .search-nav{
-			margin-top:1rem;
+			margin-top:.5rem;
 			& .input-group{
 				background-color: darken(@blue,5);
 				& .input-group-addon{
@@ -73,7 +79,7 @@ header-component{
 		}
 		& .nav-body{
 			& .row{
-				padding-top:2rem;
+				padding-top:1rem;
 				& .col{
 					& h6{
 						text-transform: uppercase;
