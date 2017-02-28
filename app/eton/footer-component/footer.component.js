@@ -18,7 +18,7 @@
 	    vm.listOfCountries = [{name:'sweden',code:'se'},
 		    {name:'france',code:'fr'},
 		    {name:'greece',code:'gr'},
-		    {name:'germany',code:'ge'}];
+		    {name:'germany',code:'de'}];
 
 	    vm.$onInit = onInit;
 	    vm.updateCountry = updateCountry;

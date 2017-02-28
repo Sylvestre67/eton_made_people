@@ -1,17 +1,17 @@
 <hr>
 
-<div class="footer-nav">
-	<span>
+<div class="row footer-nav">
+	<div class="col">
 		<a class="btn">Stores</a>
-	</span>
-	<span>
+	</div>
+	<div class="col">
 		<a class="btn">Login</a>
-	</span>
-	<span>
+	</div>
+	<div class="col">
 		<dropdown-component list="vm.listOfCountries"
 		                    item="vm.selectedCountry">
 			<dd-item>
-				<span class="flag-icon" ng-class="'flag-icon-se' + country.code"></span>
+				<span class="flag-icon" ng-class="'flag-icon-' + vm.selectedCountry.code"></span>
 				{{ vm.selectedCountry.name }}
 			</dd-item>
 			<dd-menu>
@@ -23,7 +23,7 @@
 				</li>
 			</dd-menu>
 		</dropdown-component>
-	</span>
+	</div>
 </div>
 
 <hr>
@@ -34,6 +34,17 @@
 		       placeholder="Your email"
 		       aria-describedby="basic-addon2">
 		<span class="input-group-addon" id="basic-addon2">subscribe</span>
+	</div>
+	<div class="social-icons">
+		<div>
+			<i class="ion ion-social-facebook"></i>
+		</div>
+		<div>
+			<i class="ion ion-social-pinterest-outline"></i>
+		</div>
+		<div>
+			<i class="ion ion-social-twitter"></i>
+		</div>
 	</div>
 </div>
 
