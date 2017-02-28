@@ -1,5 +1,5 @@
 /********************
-  ** Fonts **
+    ** Typo **
 ********************/
 @font-face {
 	font-family: 'futura';
@@ -16,30 +16,9 @@
 	font-family: "Times New Roman", georgia, serif;
 }
 
-/*****************************
-  ** Transition/Animation **
-*****************************/
-.transition(@property,@duration,@effect){
-	-webkit-transition: @property,@duration,@effect;
-	-moz-transition:    @property,@duration,@effect;
-	-o-transition:      @property,@duration,@effect;
-	transition:         @property,@duration,@effect;
-}
-
-.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
-	-webkit-animation: @name @duration @delay @ease;
-	-moz-animation:    @name @duration @delay @ease;
-	-ms-animation:     @name @duration @delay @ease;
-	animation:         @name @duration @delay @ease;
-}
-
-.translate3d (@x, @y: 0, @z: 0) {
-	-webkit-transform:  translate3d(@x, @y, @z);
-	-moz-transform: 	 translate3d(@x, @y, @z);
-	-ms-transform: 		 translate3d(@x, @y, @z);
-	-o-transform: 		 translate3d(@x, @y, @z);
-}
-
+/********************
+  ** Styles **
+********************/
 .opacity (@opacity: 0.5) {
 	-webkit-opacity: 	@opacity;
 	-moz-opacity: 		@opacity;
@@ -60,6 +39,41 @@
 	-moz-background-clip:    padding;
 	-webkit-background-clip: padding-box;
 	background-clip:         padding-box;
+}
+
+.placeholder(@font-family-base,@font-style){
+	&::-webkit-input-placeholder {
+		font-family: @font-family-base;
+		font-style:  @font-style;
+	}
+	&::-moz-placeholder {
+		font-family: @font-family-base;
+		font-style: @font-style;
+	}
+	&:-ms-input-placeholder {
+		font-family: @font-family-base;
+		font-style: @font-style;
+	}
+	&:-moz-placeholder {
+		font-family: @font-family-base;
+		font-style: @font-style;
+	}
+}
+
+/********************
+  ** Animation **
+********************/
+.animations(@name,@duration:250ms,@timing:ease,@delay:0s){
+	-webkit-animation:  @name @duration @timing @delay;
+	-moz-animation:     @name @duration @timing @delay;
+	animation:          @name @duration @timing @delay;
+}
+
+.translate3d (@x, @y: 0, @z: 0) {
+	-webkit-transform:  translate3d(@x, @y, @z);
+	-moz-transform: 	 translate3d(@x, @y, @z);
+	-ms-transform: 		 translate3d(@x, @y, @z);
+	-o-transform: 		 translate3d(@x, @y, @z);
 }
 
 /********************
@@ -106,23 +120,4 @@
 	-moz-flex:@flex-grow @flex-shrink @flex-basis;
 	-ms-flex:@flex-grow @flex-shrink @flex-basis;
 	flex:@flex-grow @flex-shrink @flex-basis;
-}
-
-.placeholder(@font-family-base,@font-style){
-	&::-webkit-input-placeholder {
-		font-family: @font-family-base;
-		font-style:  @font-style;
-	}
-	&::-moz-placeholder {
-		font-family: @font-family-base;
-		font-style: @font-style;
-	}
-	&:-ms-input-placeholder {
-		font-family: @font-family-base;
-		font-style: @font-style;
-	}
-	&:-moz-placeholder {
-		font-family: @font-family-base;
-		font-style: @font-style;
-	}
 }

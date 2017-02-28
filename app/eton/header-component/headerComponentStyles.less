@@ -96,54 +96,50 @@ header-component{
   ** Animation **
 ********************/
 @animation-duration:600ms;
-@keyframes slide {
+
+/* slide down animation */
+.slide-mixin-frames(){
 	from   {max-height:0;}
 	to     {max-height:400px;}
 }
+@keyframes         slide {.slide-mixin-frames;}
+@-webkit-keyframes slide {.slide-mixin-frames;}
+@-o-keyframes      slide {.slide-mixin-frames;}
+@-ms-keyframes     slide {.slide-mixin-frames;}
 
-@-webkit-keyframes slide {
-	from   {max-height:0;}
-	to     {max-height:400px;}
-}
-
-@keyframes fade {
+/* text fading animation */
+.fade-mixin-frames(){
 	from   {.opacity(@opacity: 0);}
 	to     {.opacity(@opacity: 1);}
 }
+@keyframes         fade { .fade-mixin-frames; }
+@-webkit-keyframes fade { .fade-mixin-frames; }
+@-o-keyframes      fade { .fade-mixin-frames; }
+@-ms-keyframes     fade { .fade-mixin-frames; }
 
-@-webkit-keyframes fade {
-	from   {.opacity(@opacity: 0);}
-	to     {.opacity(@opacity: 1);}
-}
-
-@keyframes input {
+/* input slide-down-like animation*/
+.input-mixin-frames(){
 	from   {.translate3d (@x: 0, @y: -40px, @z: 0);}
 	to     {.translate3d (@x: 0, @y: 0, @z: 0);}
 }
-
-@-webkit-keyframes input {
-	from   {.translate3d (@x: 0, @y: -40px, @z: 0);}
-	to {.translate3d (@x: 0, @y: 0, @z: 0);}
-}
+@keyframes         input { .input-mixin-frames; }
+@-webkit-keyframes input { .input-mixin-frames; }
+@-o-keyframes      input { .input-mixin-frames; }
+@-ms-keyframes     input { .input-mixin-frames; }
 
 header-component{
 	& .navbar{
 		& .nav-body{
 			background-color:@blue;
 			&.open{
-				animation-name: slide;
-				animation-duration: @animation-duration;
-				animation-timing-function: ease;
+				.animations(@name:slide,@duration:@animation-duration);
 			}
 			& > .row{
 				&.open-add{
 					.opacity(@opacity: 0);
 				}
 				&.open{
-					animation-name: fade;
-					animation-duration: @animation-duration;
-					animation-delay: 200ms;
-					animation-timing-function: ease;
+					.animations(@name:fade,@duration:@animation-duration,@delay:200ms);
 				}
 			}
 		}
@@ -151,9 +147,7 @@ header-component{
 			position:relative;
 			z-index:-2;
 			&.open{
-				animation-name: input;
-				animation-duration: @animation-duration;
-				animation-timing-function: ease;
+				.animations(@name:input,@duration:@animation-duration);
 			}
 		}
 	}
