@@ -2,6 +2,24 @@ module.exports = function(grunt) {
 	require('jit-grunt')(grunt);
 
 	grunt.initConfig({
+		copy: {
+			main: {
+				files: [
+					{
+						expand: true,
+						cwd: 'node_modules/flag-icon-css/flags',
+						src: ['**'],
+						dest: 'dist/flags/'
+					},
+					{
+						expand: true,
+						cwd: 'bower_components/Ionicons/fonts',
+						src: ['**'],
+						dest: 'dist/fonts/'
+					}
+				]
+			}
+		},
 		concat: {
 			options: {
 				separator: ';',
@@ -32,7 +50,7 @@ module.exports = function(grunt) {
 			eton_imports: {
 				src: [
 					'app/*.less',
-					'app/**/*.less'
+					'app/**/*.less',
 				],
 				dest: 'dist/css/imports.less'
 			}
@@ -46,7 +64,7 @@ module.exports = function(grunt) {
 				},
 				files: {
 					'dist/css/eton.min.css': [
-						'dist/css/imports.less',
+						'dist/css/imports.less'
 					]
 				}
 			}
@@ -151,12 +169,14 @@ module.exports = function(grunt) {
 		grunt.config.set('assets', assets);
 	});
 
-	grunt.registerTask('default', ['concat', 'ngAnnotate', 'uglify', 'less_imports', 'less',
+	grunt.registerTask('default', ['copy','concat', 'ngAnnotate', 'uglify:app', 'less_imports', 'less',
 		'setopts_dev', 'replace', 'watch']);
 
-	grunt.registerTask('rebuild', ['concat', 'ngAnnotate', 'uglify', 'less_imports', 'less',
+	grunt.registerTask('rebuild', ['copy','concat', 'ngAnnotate', 'uglify', 'less_imports', 'less',
 		'setopts_dev', 'replace', 'watch']);
 
-	grunt.registerTask('deploy', ['clean:release', 'concat', 'ngAnnotate', 'uglify', 'less_imports', 'less',
+	grunt.registerTask('deploy', ['clean:release','copy', 'concat', 'ngAnnotate', 'uglify', 'less_imports', 'less',
 		'hash', 'setopts', 'replace', 'clean:build']);
 };
+
+/*@import '../../node_modules/flag-icon-css/less/flag-icon';*/

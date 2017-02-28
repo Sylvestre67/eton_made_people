@@ -1,0 +1,25 @@
+{
+  "name": "eton_made_people",
+  "description": "Eton by made people",
+  "main": "index.js",
+  "authors": [
+    "Sylvestre Gug <sylvestre.gug@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "eton",
+    "made",
+    "people"
+  ],
+  "homepage": "https://github.com/Sylvestre67/eton_made_people",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Ionicons": "ionicons#^2.0.1"
+  }
+}
