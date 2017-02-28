@@ -96,44 +96,64 @@ header-component{
   ** Animation **
 ********************/
 @animation-duration:600ms;
+@keyframes slide {
+	from   {max-height:0;}
+	to     {max-height:400px;}
+}
+
+@-webkit-keyframes slide {
+	from   {max-height:0;}
+	to     {max-height:400px;}
+}
+
+@keyframes fade {
+	from   {.opacity(@opacity: 0);}
+	to     {.opacity(@opacity: 1);}
+}
+
+@-webkit-keyframes fade {
+	from   {.opacity(@opacity: 0);}
+	to     {.opacity(@opacity: 1);}
+}
+
+@keyframes input {
+	from   {.translate3d (@x: 0, @y: -40px, @z: 0);}
+	to     {.translate3d (@x: 0, @y: 0, @z: 0);}
+}
+
+@-webkit-keyframes input {
+	from   {.translate3d (@x: 0, @y: -40px, @z: 0);}
+	to {.translate3d (@x: 0, @y: 0, @z: 0);}
+}
+
 header-component{
 	& .navbar{
 		& .nav-body{
-			.transition(@property:all,@duration:@animation-duration,@effect:ease);
 			background-color:@blue;
-			&.ng-enter{
-				opacity:0;
-				max-height:0;
+			&.open{
+				animation-name: slide;
+				animation-duration: @animation-duration;
+				animation-timing-function: ease;
 			}
-			&.ng-enter.ng-enter-active {
-				opacity:1;
-				max-height:400px;
-			}
-			&.ng-leave{
-				// no transition on leave.
-				.transition(@property:all,@duration:0ms,@effect:ease);
+			& > .row{
+				&.open-add{
+					.opacity(@opacity: 0);
+				}
+				&.open{
+					animation-name: fade;
+					animation-duration: @animation-duration;
+					animation-delay: 200ms;
+					animation-timing-function: ease;
+				}
 			}
 		}
 		& .search-nav{
-			.transition(@property:all,@duration:@animation-duration,@effect:ease);
-			&.ng-enter{
-				position:absolute;
-				z-index:-2;
-				transform: translate3d(0,-40px,0);
-				-ms-transform: translate3d(0,-40px, 0);
-				-webkit-transform: translate3d(0,-40px,0);
-			}
-
-			&.ng-enter.ng-enter-active {
-				position:relative;
-				-webkit-transform: translate3d(0,0,0);
-				-ms-transform: translate3d(0,0,0);
-				transform: translate3d(0,0,0);
-			}
-
-			&.ng-leave{
-				// no transition on leave.
-				.transition(@property:all,@duration:0ms,@effect:ease);
+			position:relative;
+			z-index:-2;
+			&.open{
+				animation-name: input;
+				animation-duration: @animation-duration;
+				animation-timing-function: ease;
 			}
 		}
 	}

@@ -7,7 +7,7 @@
 
 	<div class="nav-menu">
 
-		<div ng-if="vm.open" class="search-nav">
+		<div class="search-nav" ng-class="(vm.open) ? 'open' : 'hide';" >
 			<div class="input-group">
 				<div class="input-group-addon">
 					<i class="icon ion-ios-search-strong"></i>
@@ -28,8 +28,8 @@
 			</span>
 		</div>
 
-		<div ng-if="vm.open" class="nav-body">
-			<div class="row">
+		<div class="nav-body" ng-class="(vm.open) ? 'open' : 'hide';">
+			<div ng-class="(vm.open) ? 'open' : 'hide';" class="row">
 				<div class="col">
 					<h6>body fit</h6>
 					<ul class="list-unstyled">
@@ -53,7 +53,7 @@
 					</ul>
 				</div>
 			</div>
-			<div class="row">
+			<div ng-class="(vm.open) ? 'open' : 'hide';" class="row">
 				<div class="col">
 					<h6>collection</h6>
 					<ul class="list-unstyled">
