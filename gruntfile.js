@@ -21,7 +21,7 @@ module.exports = function(grunt) {
 						expand: true,
 						cwd: 'app/assets/fonts',
 						src: ['**'],
-						dest: 'dist/fonts/'
+						dest: 'dist/css/fonts/'
 					}
 				]
 			}
