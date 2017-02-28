@@ -6,22 +6,17 @@ header-component{
 		background-color:@white;
 		&.open{
 			background-color:@blue;
+			color:fade(@white,90%);
 			& span{
-				color:@white;
 				& a{
-					opacity:.5;
+					color:fade(@white,50%);
 					&.active{
-						opacity:1;
+						color:fade(@white,90%);
 					}
 				}
 			}
 			& h6{
-				color:@white;
-			}
-			& ul{
-				& li{
-					color:@white;
-				}
+				font-weight: 500;
 			}
 		}
 		& .brand-nav{
@@ -34,7 +29,7 @@ header-component{
 			& span{
 				text-transform:uppercase;
 				&:first-child{
-					font-family: @base-font;
+					font-family: @caption-font;
 					font-size:1.2rem;
 					letter-spacing: .1rem;
 				}

@@ -16,6 +16,12 @@ module.exports = function(grunt) {
 						cwd: 'bower_components/Ionicons/fonts',
 						src: ['**'],
 						dest: 'dist/fonts/'
+					},
+					{
+						expand: true,
+						cwd: 'app/assets/fonts',
+						src: ['**'],
+						dest: 'dist/fonts/'
 					}
 				]
 			}
