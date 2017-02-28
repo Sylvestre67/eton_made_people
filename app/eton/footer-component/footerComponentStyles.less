@@ -6,9 +6,11 @@ footer-component{
 		margin:.5rem 0;
 		&.footer-nav{
 			margin:0 1rem;
-			& .col{
-				text-align: center;
-				& a{
+			.flex-container;
+			.flex-flow(@direction:row,@wrap:nowrap);
+			.flex-justify-content(@justify:space-around);
+			& > div{
+				& > a{
 					text-transform:capitalize;
 				}
 			}
