@@ -9,8 +9,11 @@ footer-component{
 			.flex-container;
 			.flex-flow(@direction:row,@wrap:nowrap);
 			.flex-justify-content(@justify:space-around);
+			.flex-align-items(@align-items:center);
 			& > div{
+				.flex-item(@flex-grow:0,@flex-shrink:0,@flex-basis:33%);
 				& > a{
+					width:100%;
 					text-transform:capitalize;
 				}
 			}
