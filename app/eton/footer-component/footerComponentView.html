@@ -2,10 +2,10 @@
 
 <div class="footer-nav">
 	<span>
-		<a class="">A</a>
+		<a class="btn">Stores</a>
 	</span>
 	<span>
-		<a class="">B</a>
+		<a class="btn">Login</a>
 	</span>
 	<span>
 		<dropdown-component list="vm.listOfCountries"
@@ -18,7 +18,7 @@
 				<li class="list-unstyled"
 				    ng-click="vm.updateCountry(country)"
 				    ng-repeat="country in vm.listOfCountries">
-					<span class="flag-icon" ng-class="'flag-icon-se' + country.code"></span>
+					<span class="flag-icon" ng-class="'flag-icon-' + country.code"></span>
 					{{ country.name }}
 				</li>
 			</dd-menu>
