@@ -11,11 +11,9 @@ module.exports = function(config) {
 
 		// list of files / patterns to load in the browser
 		files: [
-			'dist/js/vendors.min.*.js',
 			'dist/js/vendors.min.js',
 			'node_modules/angular-mocks/angular-mocks.js',
 			'node_modules/jasmine-promise-matchers/dist/jasmine-promise-matchers.js',
-			'dist/js/eton.min.*.js',
 			'dist/js/eton.min.js',
 
 			'app/**/*.specs.js',
