@@ -15,9 +15,7 @@ module.exports = function(config) {
 			'node_modules/angular-mocks/angular-mocks.js',
 			'node_modules/jasmine-promise-matchers/dist/jasmine-promise-matchers.js',
 			'dist/js/eton.min.js',
-
 			'app/**/*.specs.js',
-			//'app/**/*.html',
 			'*.html'
 		],
 

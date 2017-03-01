@@ -1,4 +1,4 @@
-# eton_made_people
+# Eton
 
 This project is running Node.js app using [Express 4](http://expressjs.com/).
 
